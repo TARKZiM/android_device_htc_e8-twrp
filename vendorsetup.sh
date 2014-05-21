@@ -1,1 +1,2 @@
-add_lunch_combo omni_m8whl-eng
+add_lunch_combo omni_m8-userdebug
+add_lunch_combo omni_m8-eng
