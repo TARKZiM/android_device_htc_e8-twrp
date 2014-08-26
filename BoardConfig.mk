@@ -61,8 +61,6 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 -
 BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
 TARGET_KERNEL_CONFIG := cm_m8_defconfig
 TARGET_KERNEL_SOURCE := kernel/htc/msm8974
-#TARGET_KERNEL_CONFIG := m8whl_defconfig
-#TARGET_KERNEL_SOURCE := kernel/htc/m8whl
 
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
@@ -180,6 +178,7 @@ TARGET_RECOVERY_FSTAB := device/htc/m8/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_RECOVERY_INITRC := device/htc/m8/recovery/init.rc
+BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 
 # TWRP Build Flags
 DEVICE_RESOLUTION := 1080x1920
