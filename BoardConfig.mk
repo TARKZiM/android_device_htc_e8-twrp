@@ -192,7 +192,7 @@ TW_EXTERNAL_STORAGE_PATH := "/usb_otg"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb_otg"
 TW_NO_SCREEN_BLANK := true
 TW_INCLUDE_DUMLOCK := true
-TW_HTC_LED := true
+TW_BATTERY_LED := htc-legacy
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true

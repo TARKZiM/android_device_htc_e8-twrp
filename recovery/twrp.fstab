@@ -3,7 +3,7 @@
 /boot		emmc	/dev/block/platform/msm_sdcc.1/by-name/boot
 /cache		ext4	/dev/block/platform/msm_sdcc.1/by-name/cache				flags=display="Cache"
 /system		ext4	/dev/block/platform/msm_sdcc.1/by-name/system				flags=display="System"
-/data		ext4	/dev/block/platform/msm_sdcc.1/by-name/userdata				flags=display="Data"
+/data		ext4	/dev/block/platform/msm_sdcc.1/by-name/userdata
 /devlog 	ext4	/dev/block/platform/msm_sdcc.1/by-name/devlog
 
 # Removable storage
