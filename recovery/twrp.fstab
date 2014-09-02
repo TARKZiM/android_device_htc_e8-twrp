@@ -1,9 +1,9 @@
 # mount point   fstype  device                                       	device2			flags
 /misc		emmc	/dev/block/platform/msm_sdcc.1/by-name/misc
 /boot		emmc	/dev/block/platform/msm_sdcc.1/by-name/boot
-/cache		ext4	/dev/block/platform/msm_sdcc.1/by-name/cache
-/data		ext4	/dev/block/platform/msm_sdcc.1/by-name/userdata
-/system		ext4	/dev/block/platform/msm_sdcc.1/by-name/system
+/cache		ext4	/dev/block/platform/msm_sdcc.1/by-name/cache				flags=display="Cache"
+/system		ext4	/dev/block/platform/msm_sdcc.1/by-name/system				flags=display="System"
+/data		ext4	/dev/block/platform/msm_sdcc.1/by-name/userdata				flags=display="Data"
 /devlog 	ext4	/dev/block/platform/msm_sdcc.1/by-name/devlog
 
 # Removable storage
