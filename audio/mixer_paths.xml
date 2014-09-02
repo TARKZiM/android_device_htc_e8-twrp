@@ -381,6 +381,10 @@
         <path name="low-latency-playback speaker" />
     </path>
 
+    <path name="low-latency-playback voice-speaker">
+        <path name="low-latency-playback speaker" />
+    </path>
+
     <path name="compress-offload-playback speaker">
         <ctl name="QUAT_MI2S_RX Audio Mixer MultiMedia4" value="1" />
     </path>
@@ -906,15 +910,11 @@
     </path>
 
     <path name="speaker-mic">
-        <path name="dmic1" />
+        <path name="speaker-dmic-endfire" />
     </path>
 
     <path name="handset">
-        <ctl name="SLIM RX1 MUX" value="AIF1_PB" />
-        <ctl name="SLIM_0_RX Channels" value="One" />
-        <ctl name="RX1 MIX1 INP1" value="RX1" />
-        <ctl name="CLASS_H_DSM MUX" value="DSM_HPHL_RX1" />
-        <ctl name="DAC1 Switch" value="1" />
+        <path name="earpiece" />
     </path>
 
     <path name="voice-dmic-ef">
@@ -935,7 +935,7 @@
     </path>
 
     <path name="voice-handset-tmus">
-        <path name="handset" />
+        <path name="earpiece-voice" />
     </path>
 
     <path name="speaker-voice">
@@ -951,7 +951,7 @@
     </path>
 
     <path name="voice-speaker">
-        <path name="voice-call voice-speaker" />
+        <path name="speaker" />
     </path>
 
     <path name="voice-speaker-mic">

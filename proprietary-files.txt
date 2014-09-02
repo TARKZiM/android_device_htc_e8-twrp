@@ -1,3 +1,4 @@
+-app/EasyAccessService.apk
 bin/adsprpcd
 bin/ATFWD-daemon
 bin/cir_fw_update
@@ -245,6 +246,7 @@ vendor/lib/egl/eglsubAndroid.so
 vendor/lib/egl/libEGL_adreno.so
 vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
+vendor/lib/egl/libplayback_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/libacdbloader.so
 vendor/lib/libacdbmapper.so
