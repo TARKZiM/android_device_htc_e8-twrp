@@ -11,7 +11,7 @@ on property:sys.usb.config=adb
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=mtp,adb
-    write /sys/devices/platform/android_usb/usb_function_switch 131
+    write /sys/devices/platform/android_usb/usb_function_switch 130
     setprop sys.usb.state ${sys.usb.config}
 
 service chargeled /sbin/chargeled
