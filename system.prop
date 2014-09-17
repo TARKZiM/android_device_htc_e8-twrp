@@ -3,4 +3,4 @@
 ro.product.model=One M8
 
 # USB
-persist.sys.usb.config=adb
+persist.sys.usb.config=mtp

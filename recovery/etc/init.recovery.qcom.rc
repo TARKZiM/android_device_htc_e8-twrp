@@ -1,37 +1,21 @@
 on boot
-    setprop sys.usb.config=mtp,adb
-    setprop usb.vendor 0bb4
-    setprop usb.product.adb 0c02
-    setprop usb.product.mtpadb 0f87
-    setprop usb.product.ums 061a
     start choice_fn
     start chargeled
 
 on property:sys.usb.config=none
-    stop adbd
-    write /sys/class/android_usb/android0/enable 0
-    write /sys/class/android_usb/android0/bDeviceClass 0
     write /sys/devices/platform/android_usb/usb_function_switch 1
     setprop sys.usb.state ${sys.usb.config}
 
-on property:sys.usb.config=mass_storage
-    write /sys/devices/platform/android_usb/usb_function_switch 1
-    setprop sys.usb.state ${sys.usb.config}
-
-on property:sys.usb.config=mass_storage,adb
-    start adbd
+on property:sys.usb.config=adb
     write /sys/devices/platform/android_usb/usb_function_switch 3
     setprop sys.usb.state ${sys.usb.config}
 
 on property:sys.usb.config=mtp,adb
-    start adbd
-    write /sys/devices/platform/android_usb/usb_function_switch 130
+    write /sys/devices/platform/android_usb/usb_function_switch 131
     setprop sys.usb.state ${sys.usb.config}
 
-on property:sys.usb.config=adb
-    start adbd
-    write /sys/devices/platform/android_usb/usb_function_switch 3
-    setprop sys.usb.state ${sys.usb.config}
+service chargeled /sbin/chargeled
+    disabled
 
 service choice_fn /sbin/choice_fn
     oneshot
@@ -46,6 +30,3 @@ service offmode_charging /sbin/offmode_charging
 service power_test /sbin/power_test
     disabled
     oneshot
-
-service chargeled /sbin/chargeled
-    disabled
