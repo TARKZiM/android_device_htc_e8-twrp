@@ -81,7 +81,7 @@ ro.cwm.forbid_format=/boot,/devlog,/fataldevlog,/ramdump,/carrier,/custdata,/fir
 ro.cwm.forbid_mount=/boot,/devlog,/fataldevlog,/ramdump,/carrier,/custdata,/firmware/radio,/firmware/adsp,/firmware/wcnss
 
 # USB
-persist.sys.usb.config=mtp
+persist.sys.usb.config=mtp,adb
 
 # Wifi
 wifi.interface=wlan0

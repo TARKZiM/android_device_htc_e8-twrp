@@ -59,105 +59,8 @@ BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 --tags_offset 0x01e00000
 BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
-TARGET_KERNEL_CONFIG := cm_m8_defconfig
-TARGET_KERNEL_SOURCE := kernel/htc/msm8974
-
-# QCOM hardware
-BOARD_USES_QCOM_HARDWARE := true
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
-TARGET_QCOM_AUDIO_VARIANT := caf
-TARGET_QCOM_DISPLAY_VARIANT := caf-new
-TARGET_QCOM_MEDIA_VARIANT := caf-new
-TARGET_USES_QCOM_BSP := true
-
-# Audio
-AUDIO_FEATURE_DISABLED_MULTI_VOICE_SESSIONS := true
-AUDIO_FEATURE_SEPARATE_SPKR_BACKEND := true
-BOARD_AUDIO_AMPLIFIER := device/htc/m8/libaudioamp
-BOARD_USES_ALSA_AUDIO := true
-
-# Bluetooth
-BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_QCOM := true
-BLUETOOTH_HCI_USE_MCT := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/m8/bluetooth
-
-# Camera
-COMMON_GLOBAL_CFLAGS += -DHTC_CAMERA_HARDWARE
-COMMON_GLOBAL_CFLAGS += -DPROPERTY_PERMS_APPEND='{"htc.camera.sensor.", AID_CAMERA, 0}, {"camera.4k2k.", AID_MEDIA, 0},'
-USE_DEVICE_SPECIFIC_CAMERA := true
-
-# Graphics
-BOARD_EGL_CFG := device/htc/m8/configs/egl.cfg
-TARGET_DISPLAY_USE_RETIRE_FENCE := true
-TARGET_USES_C2D_COMPOSITION := true
-TARGET_USES_ION := true
-TARGET_USES_OVERLAY := true
-USE_OPENGL_RENDERER := true
-OVERRIDE_RS_DRIVER := libRSDriver_adreno.so
-MAX_EGL_CACHE_KEY_SIZE := 12*1024
-MAX_EGL_CACHE_SIZE := 2048*1024
-TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
-
-# Lights
-TARGET_PROVIDES_LIBLIGHT := true
-
-# NFC
-BOARD_NFC_HAL_SUFFIX := msm8974
-
-# Power
-TARGET_POWERHAL_VARIANT := qcom
-
-# RIL
-BOARD_PROVIDES_LIBRIL := true
-
-# RPC
-TARGET_NO_RPC := true
-
-# Time services
-BOARD_USES_QC_TIME_SERVICES := true
-
-# Wifi
-BOARD_HAS_QCOM_WLAN := true
-BOARD_WLAN_DEVICE := qcwcn
-WPA_SUPPLICANT_VERSION := VER_0_8_X
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-TARGET_USES_WCNSS_CTRL := true
-WIFI_DRIVER_FW_PATH_STA := "sta"
-WIFI_DRIVER_FW_PATH_AP := "ap"
-
-# SELinux
-BOARD_SEPOLICY_DIRS += \
-    device/htc/m8/sepolicy
-
-BOARD_SEPOLICY_UNION += \
-    app.te \
-    bluetooth.te \
-    device.te \
-    domain.te \
-    drmserver.te \
-    file_contexts \
-    file.te \
-    hci_init.te \
-    healthd.te \
-    init_shell.te \
-    init.te \
-    keystore.te \
-    kickstart.te \
-    mediaserver.te \
-    rild.te \
-    surfaceflinger.te \
-    system.te \
-    ueventd.te \
-    wpa_socket.te \
-    wpa.te
-
-# Webkit
-ENABLE_WEBGL := true
-TARGET_FORCE_CPU_UPLOAD := true
+TARGET_KERNEL_CONFIG := m8_defconfig
+TARGET_KERNEL_SOURCE := kernel/htc/m8gpe
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 274464768
@@ -174,25 +77,17 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_RECOVERY_SWIPE := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 BOARD_USES_MMCUTILS := true
-TARGET_RECOVERY_FSTAB := device/htc/m8/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TARGET_RECOVERY_INITRC := device/htc/m8/recovery/init.rc
-BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 
 # TWRP Build Flags
+BOARD_RECOVERY_BLDRMSG_OFFSET := 2048
 DEVICE_RESOLUTION := 1080x1920
-RECOVERY_SDCARD_ON_DATA := true
-TW_NO_USB_STORAGE := true
-TW_INTERNAL_STORAGE_PATH := "/data/media"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
-TW_EXTERNAL_STORAGE_PATH := "/external_sd"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "external_sd"
-TW_EXTERNAL_STORAGE_PATH := "/usb_otg"
-TW_EXTERNAL_STORAGE_MOUNT_POINT := "usb_otg"
-TW_NO_SCREEN_BLANK := true
 TW_INCLUDE_DUMLOCK := true
-TW_BATTERY_LED := htc-legacy
+TW_NO_SCREEN_BLANK := true
+
+# USB
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
@@ -201,6 +96,3 @@ TARGET_LIBINIT_DEFINES_FILE := device/htc/m8/init/init_m8.c
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
-
-# Hardware
-BOARD_HARDWARE_CLASS := device/htc/m8/cmhw
