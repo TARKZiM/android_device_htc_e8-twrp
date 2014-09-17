@@ -1,5 +1,5 @@
 on boot
-    setprop sys.usb.config=mtp,adb,mass_storage
+    setprop sys.usb.config=mtp,adb
     setprop usb.vendor 0bb4
     setprop usb.product.adb 0c02
     setprop usb.product.mtpadb 0f87

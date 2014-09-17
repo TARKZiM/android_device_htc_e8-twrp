@@ -34,6 +34,3 @@ PRODUCT_PACKAGES += \
     offmode_charging_res_images \
     offmode_charging_warn_res_images
 
-# Variant linking script
-PRODUCT_PACKAGES += \
-    makelinks.sh

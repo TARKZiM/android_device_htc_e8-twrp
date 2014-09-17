@@ -28,8 +28,6 @@
 # 0P6B20000 - Verizon
 # 0P6B70000 - Sprint
 
-TARGET_OTA_ASSERT_DEVICE := m8,m8wl,m8wlv,m8vzw,m8whl,m8spr
-
 BOARD_VENDOR := htc
 
 # Bootloader
@@ -48,9 +46,6 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := krait
 TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
-
-# Flags
-COMMON_GLOBAL_CFLAGS += -DHTCLOG
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache
@@ -93,6 +88,3 @@ TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lu
 TARGET_UNIFIED_DEVICE := true
 TARGET_INIT_VENDOR_LIB := libinit_m8
 TARGET_LIBINIT_DEFINES_FILE := device/htc/m8/init/init_m8.c
-
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/htc/m8/releasetools
