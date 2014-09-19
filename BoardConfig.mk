@@ -82,7 +82,9 @@ DEVICE_RESOLUTION := 1080x1920
 TW_INCLUDE_DUMLOCK := true
 TW_NO_EXFAT_FUSE := true
 TW_NO_SCREEN_BLANK := true
-TW_NO_USB_STORAGE := true
+
+# USB
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/msm_dwc3/f9200000.dwc3/gadget/lun%d/file
 
 # Vendor Init
 TARGET_UNIFIED_DEVICE := true
