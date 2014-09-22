@@ -1,4 +1,5 @@
 LOCAL_PATH := $(call my-dir)
+LZMA_BIN := /usr/bin/lzma
 PERL = perl
 
 ## Don't change anything under here. The variables are named M8_whatever
@@ -48,6 +49,10 @@ $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES) $(INSTAL
 $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) $(INSTALLED_DTIMAGE_TARGET) \
 		$(recovery_ramdisk) \
 		$(recovery_kernel)
+	@echo -e ${CL_GRN}"----- Compressing recovery ramdisk with lzma ------"${CL_RST}
+	$(hide) rm -f $(OUT)/ramdisk-recovery.cpio.lzma
+	$(LZMA_BIN) $(recovery_uncompressed_ramdisk)
+	$(hide) cp $(recovery_uncompressed_ramdisk).lzma $(recovery_ramdisk)
 	@echo -e ${CL_CYN}"----- Making recovery image ------"${CL_RST}
 	$(hide) $(MKBOOTIMG) $(INTERNAL_RECOVERYIMAGE_ARGS) $(BOARD_MKBOOTIMG_ARGS) --dt $(INSTALLED_DTIMAGE_TARGET) --output $@
 	$(hide) $(call assert-max-image-size,$@,$(BOARD_RECOVERYIMAGE_PARTITION_SIZE),raw)
