@@ -26,6 +26,7 @@
 # 0P6B13000 - T-Mobile
 # 0P6B16000 - Telus/Rogers (Canada)
 # 0P6B20000 - Verizon
+# 0P6B64000 - Dual SIM
 # 0P6B70000 - Sprint
 
 BOARD_VENDOR := htc
