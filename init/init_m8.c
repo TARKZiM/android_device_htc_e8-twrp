@@ -56,8 +56,6 @@ void vendor_load_properties()
     if (strstr(bootmid, "0P6B20000")) {
         /* m8vzw (m8wl) */
         cdma_properties("0", "10", "310012", "Verizon");
-        property_set("ro.build.fingerprint", "htc/HTCOneM8vzw/htc_m8wl:4.4.3/KTU84L/362279.2:user/release-keys");
-        property_set("ro.build.description", "2.21.605.2 CL362279 release-keys");
         property_set("ro.product.device", "m8wl");
         property_set("ro.product.model", "HTC6525LVW");
         property_set("ro.build.product", "m8wl");
@@ -81,8 +79,6 @@ void vendor_load_properties()
     } else if (strstr(bootmid, "0P6B70000")) {
         /* m8spr (m8whl) */
         cdma_properties("1", "8", "310120", "Sprint");
-        property_set("ro.build.fingerprint", "htc/sprint_wwe/htc_m8whl:4.4.2/KOT49H/326598.8:user/release-keys");
-        property_set("ro.build.description", "1.54.651.8 CL326598 release-keys");
         property_set("ro.product.device", "m8whl");
         property_set("ro.product.model", "831C");
         property_set("ro.build.product", "m8whl");
@@ -93,15 +89,11 @@ void vendor_load_properties()
         property_set("ro.ril.set.mtusize", "1422");
     } else if (strstr(bootmid, "0P6B64000")) {
         /* m8dugl */
-        property_set("ro.build.fingerprint", "htc/htc_europe/htc_m8dug:4.4.2/KOT49H/352881.12:user/release-keys");
-        property_set("ro.build.description", "1.45.401.12 CL352881 release-keys");
         property_set("ro.product.device", "m8dugl");
         property_set("ro.product.model", "HTC One_M8 dual sim");
         property_set("ro.telephony.default_network", "9");
     } else {
         /* m8 */
-        property_set("ro.build.fingerprint", "htc/htc_europe/htc_m8:4.4.2/KOT49H/325784.5:user/release-keys");
-        property_set("ro.build.description", "1.54.401.5 CL325784 release-keys");
         property_set("ro.product.device", "m8");
         property_set("ro.product.model", "HTC One_M8");
         property_set("ro.telephony.default_network", "9");

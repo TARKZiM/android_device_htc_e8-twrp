@@ -2,8 +2,8 @@ on early-init
     setenforce permissive
 
 on init
-    # exfat
-    insmod /system/lib/modules/texfat.ko
+    # Need module to load dm-crypt tables
+    insmod /system/lib/modules/dm-crypt.ko
 
 on boot
     start choice_fn
