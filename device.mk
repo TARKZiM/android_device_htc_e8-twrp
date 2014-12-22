@@ -32,6 +32,5 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     offmode_charging_res_images \
     offmode_charging_warn_res_images \
-    dm-crypt.ko \
     dt.img
 
