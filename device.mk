@@ -32,7 +32,8 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc \
     offmode_charging_res_images \
     offmode_charging_warn_res_images \
-    dt.img
+    dt.img \
+    texfat.ko
 PRODUCT_COPY_FILES += \
     bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
 
