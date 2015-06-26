@@ -4,6 +4,8 @@ on early-init
 
 on boot
     write /sys/devices/platform/android_usb/usb_function_switch 130
+
+    start choice_fn
     start chargeled
 
 on property:sys.usb.config=adb
@@ -19,6 +21,10 @@ on property:sys.usb.config=mtp,adb
 service chargeled /sbin/chargeled
     disabled
     seclabel u:r:healthd:s0
+
+service choice_fn /sbin/choice_fn
+    oneshot
+    seclabel u:r:recovery:s0
 
 service detect_key /sbin/detect_key
     disabled
