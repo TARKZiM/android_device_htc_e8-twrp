@@ -196,6 +196,7 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         property_set("ro.build.fingerprint", "htc/m8_google/htc_m8:5.1/LMY47O.H4/519376:user/release-keys");
         property_set("ro.build.description", "4.04.1700.4 CL519376 release-keys");
         property_set("ro.product.device", "htc_m8");
+        property_set("ro.product.model", "HTC One_M8");
     }
 
     property_get("ro.product.device", device);
