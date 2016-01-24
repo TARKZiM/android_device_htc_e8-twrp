@@ -83,8 +83,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         common_properties();
         cdma_properties("0", "10");
         property_set("ro.product.model", "HTC6525LVW");
-        property_set("ro.build.fingerprint", "htc/HTCOneM8vzw/htc_m8wl:4.4.4/KTU84P/390638.4:user/release-keys");
-        property_set("ro.build.description", "3.28.605.4 CL390638 release-keys");
         property_set("ro.product.device", "htc_m8wl");
         property_set("ro.build.product", "htc_m8wl");
         property_set("ro.ril.vzw.feature", "1");
@@ -110,12 +108,10 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         common_properties();
         cdma_properties("1", "8");
         property_set("ro.product.model", "831C");
-        property_set("ro.build.fingerprint", "htc/sprint_wwe/htc_m8whl:5.0.1/LRX22C/476182.10:user/release-keys");
-        property_set("ro.build.description", "4.20.651.10 CL476182 release-keys");
         property_set("ro.product.device", "htc_m8whl");
         property_set("ro.build.product", "htc_m8whl");
         property_set("telephony.sms.pseudo_multipart", "1");
-        property_set("ro.ril.enable.pre_r8fd=1", "1");
+        property_set("ro.ril.enable.pre_r8fd", "1");
         property_set("ro.ril.oem.ecclist", "911");
         property_set("ro.ril.set.mtusize", "1422");
         property_set("ro.cdma.home.operator.numeric", "310120");
@@ -193,8 +189,6 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         common_properties();
         gsm_properties("9");
         property_set("ro.build.product", "htc_m8");
-        property_set("ro.build.fingerprint", "htc/m8_google/htc_m8:5.1/LMY47O.H4/519376:user/release-keys");
-        property_set("ro.build.description", "4.04.1700.4 CL519376 release-keys");
         property_set("ro.product.device", "htc_m8");
         property_set("ro.product.model", "HTC One_M8");
     }
