@@ -26,10 +26,6 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     ueventd.qcom.rc
 
-# Recovery
-PRODUCT_PACKAGES += \
-    chargeled
-# Time Zone data
+# Time Zone data for Recovery
 PRODUCT_COPY_FILES += \
     bionic/libc/zoneinfo/tzdata:recovery/root/system/usr/share/zoneinfo/tzdata
-
