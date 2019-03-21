@@ -56,9 +56,7 @@ TARGET_USE_KRAIT_BIONIC_OPTIMIZATION := true
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 ehci-hcd.park=3 zcache androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_SEPARATED_DT := true
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 --dt device/htc/m8/dt.img --tags_offset 0x01e00000
-BOARD_CUSTOM_BOOTIMG_MK := device/htc/m8/mkbootimg.mk
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x02008000 --dt device/$(BOARD_VENDOR)/$(TARGET_DEVICE)/prebuilt/dt.img --tags_offset 0x01e00000
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
@@ -73,11 +71,13 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
+BOARD_NEEDS_LZMA_MINIGZIP := true
 BOARD_RECOVERY_SWIPE := true
 BOARD_USES_MMCUTILS := true
 COMMON_GLOBAL_CPPFLAGS += -DBOARD_RECOVERY_BLDRMSG_OFFSET=2048
-TARGET_PREBUILT_KERNEL := device/htc/m8/kernel
-TARGET_RECOVERY_DEVICE_MODULES := chargeled
+TARGET_PREBUILT_KERNEL := device/$(BOARD_VENDOR)/$(TARGET_DEVICE)/prebuilt/kernel
+TARGET_RECOVERY_DEVICE_MODULES := chargeled tzdata
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT)/usr/share/zoneinfo/tzdata
 
 # TWRP Build Flags
 TW_THEME := portrait_hdpi
