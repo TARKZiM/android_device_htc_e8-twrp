@@ -1,5 +1,5 @@
 TeamWin Recovery Project
 
-Device files for HTC One (M8)
+Device files for HTC Desire Eye
 
-Builds with OmniROM android-5.1 tree
+Builds with OmniROM android-8.1 tree

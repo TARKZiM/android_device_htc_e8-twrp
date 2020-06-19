@@ -20,19 +20,6 @@
 # definition file).
 #
 
-# Model Ids
-# 0P6B10000 - International
-# 0P6B12000 - AT&T/Dev Edition
-# 0P6B13000 - T-Mobile
-# 0P6B16000 - Telus/Rogers (Canada)
-# 0P6B20000 - Verizon
-# 0P6B70000 - Sprint
-
-# Model Ids (Dual SIM variants)
-# 0P6B41000 - Chinese (China Telecom) LTE/EV-DO/CDMA + GSM version
-# 0P6B61000 - Chinese (China Unicom) LTE/WCDMA/GSM + GSM version
-# 0P6B64000 / 0P6B68000 - International LTE/WCDMA/GSM + GSM version
-
 BOARD_VENDOR := htc
 
 # Bootloader
@@ -104,7 +91,3 @@ TW_USE_TOOLBOX := true
 #TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT)/xbin/strace
 #TW_CRYPTO_SYSTEM_VOLD_DEBUG := true
 #TW_CRYPTO_SYSTEM_VOLD_DISABLE_TIMEOUT := true
-
-# Vendor Init
-TARGET_INIT_VENDOR_LIB := libinit_$(TARGET_DEVICE)
-

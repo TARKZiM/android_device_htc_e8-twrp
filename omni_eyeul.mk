@@ -22,7 +22,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := m8
+PRODUCT_RELEASE_NAME := eyeul
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
@@ -31,8 +31,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := m8
-PRODUCT_NAME := omni_m8
+PRODUCT_DEVICE := eyeul
+PRODUCT_NAME := omni_eyeul
 PRODUCT_BRAND := htc
-PRODUCT_MODEL := HTC One_M8
+PRODUCT_MODEL := HTC Desire Eye
 PRODUCT_MANUFACTURER := htc
